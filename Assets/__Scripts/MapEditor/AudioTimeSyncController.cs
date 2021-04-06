@@ -197,13 +197,11 @@ public class AudioTimeSyncController : MonoBehaviour, CMInput.IPlaybackActions, 
     }
     public void CancelPlaying()
     {
-        IsPlaying = false;
-        CurrentSeconds = playStartTime;
-
-        songAudioSource.Stop();
-        SnapToGrid();
-
-        if (OnPlayToggle != null) OnPlayToggle(IsPlaying);
+        if (IsPlaying)
+        {
+            TogglePlaying();
+            CurrentSeconds = playStartTime;
+        }
     }
 
     public void SnapToGrid(float seconds)
