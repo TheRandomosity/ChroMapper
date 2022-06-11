@@ -18,21 +18,6 @@ MonoBehaviour:
   m_Metadata:
     m_Items:
     - id: 0
-    - id: 1
-    - id: 2
-    - id: 3
-    - id: 4
-    - id: 5
-    - id: 6
-    - id: 7
-    - id: 8
-    - id: 9
-    - id: 10
-    - id: 11
-    - id: 12
-    - id: 13
-    - id: 14
-    - id: 15
   m_TableData:
   - m_Id: 1
     m_Localized: "Param\xE8tres - {tabName}"
@@ -85,10 +70,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 13
     m_Localized: "Ne pas placer de murs de dur\xE9e 0"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 14
-    m_Localized: Compteurs+
     m_Metadata:
       m_Items: []
   - m_Id: 15
@@ -301,7 +282,7 @@ MonoBehaviour:
     m_Localized: "Plugins charg\xE9s: {Count}"
     m_Metadata:
       m_Items:
-      - id: 1
+      - id: 0
   - m_Id: 67
     m_Localized: Infos des plugins
     m_Metadata:
@@ -340,7 +321,7 @@ MonoBehaviour:
     m_Localized: "{TextValue} d\xE9cimale(s)"
     m_Metadata:
       m_Items:
-      - id: 2
+      - id: 0
   - m_Id: 74
     m_Localized: "\xC0 combien de d\xE9cimales arrondir les valeurs \"_time\" pour
       chaque objet de la map au moment d'\xE9crire sur le disque. Une pr\xE9cision
@@ -350,10 +331,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 75
     m_Localized: Guide de dev de plugin
-    m_Metadata:
-      m_Items: []
-  - m_Id: 76
-    m_Localized: Afficher des stats sur votre map.
     m_Metadata:
       m_Items: []
   - m_Id: 80
@@ -589,7 +566,7 @@ MonoBehaviour:
     m_Localized: Plugins
     m_Metadata:
       m_Items:
-      - id: 3
+      - id: 0
   - m_Id: 132
     m_Localized: "Exp\xE9rimental"
     m_Metadata:
@@ -602,47 +579,47 @@ MonoBehaviour:
     m_Localized: '{TextValue}'
     m_Metadata:
       m_Items:
-      - id: 4
+      - id: 0
   - m_Id: 135
     m_Localized: '{TextValue}'
     m_Metadata:
       m_Items:
-      - id: 5
+      - id: 0
   - m_Id: 136
     m_Localized: '{TextValue}'
     m_Metadata:
       m_Items:
-      - id: 6
+      - id: 0
   - m_Id: 137
     m_Localized: "{TextValue}\xB0"
     m_Metadata:
       m_Items:
-      - id: 7
+      - id: 0
   - m_Id: 138
     m_Localized: '{TextValue}'
     m_Metadata:
       m_Items:
-      - id: 8
+      - id: 0
   - m_Id: 139
     m_Localized: '{TextValue} temps'
     m_Metadata:
       m_Items:
-      - id: 9
+      - id: 0
   - m_Id: 140
     m_Localized: '{TextValue} temps'
     m_Metadata:
       m_Items:
-      - id: 10
+      - id: 0
   - m_Id: 141
     m_Localized: '{TextValue}'
     m_Metadata:
       m_Items:
-      - id: 11
+      - id: 0
   - m_Id: 142
     m_Localized: '{TextValue}'
     m_Metadata:
       m_Items:
-      - id: 12
+      - id: 0
   - m_Id: 143
     m_Localized: Limiter l'affichage de la rotation
     m_Metadata:
@@ -690,52 +667,51 @@ MonoBehaviour:
     m_Localized: '{TextValue}'
     m_Metadata:
       m_Items:
-      - id: 13
+      - id: 0
   - m_Id: 154
-    m_Localized: Echelle de l'UI
+    m_Localized: "\xC9chelle de l'interface"
     m_Metadata:
       m_Items: []
   - m_Id: 155
-    m_Localized: "Contr\xF4le l'\xE9chelle de tous les \xE9l\xE9ments de l'UI."
+    m_Localized: "Contr\xF4le l'\xE9chelle de tous les \xE9l\xE9ments de l'interface."
     m_Metadata:
       m_Items: []
   - m_Id: 156
     m_Localized: '{TextValue}'
     m_Metadata:
       m_Items:
-      - id: 14
+      - id: 0
   - m_Id: 157
-    m_Localized: "Mod\xE8les d'\xE9v\xE9nements pyramidaux"
+    m_Localized: "Mod\xE8les d'\xE9v\xE9nements"
     m_Metadata:
       m_Items: []
   - m_Id: 158
-    m_Localized: "Changer les mod\xE8les d'\xE9v\xE9nements d'\xE9clairage en pyramides
-      au lieu de cubes."
+    m_Localized: "Modifiez les mod\xE8les d'\xE9v\xE9nements d'\xE9clairage."
     m_Metadata:
       m_Items: []
   - m_Id: 159
-    m_Localized: Release Channel
+    m_Localized: Version stable
     m_Metadata:
       m_Items: []
   - m_Id: 160
-    m_Localized: Use dev to get the latest features or fixes. Stable if you want
-      to avoid breaking bugs.
+    m_Localized: "Utilisez dev pour obtenir les derni\xE8res fonctionnalit\xE9s ou
+      corrections. Stable si vous voulez \xE9viter les bugs."
     m_Metadata:
       m_Items: []
   - m_Id: 161
-    m_Localized: Release Server
+    m_Localized: Serveur de release
     m_Metadata:
       m_Items: []
   - m_Id: 162
-    m_Localized: Where to download editor updates from
+    m_Localized: "O\xF9 t\xE9l\xE9charger les mises \xE0 jour de l'\xE9diteur"
     m_Metadata:
       m_Items: []
   - m_Id: 163
-    m_Localized: That doesn't look right
+    m_Localized: Cela ne semble pas correct
     m_Metadata:
       m_Items: []
   - m_Id: 164
-    m_Localized: Validating release server...
+    m_Localized: Validation du serveur de release...
     m_Metadata:
       m_Items: []
   - m_Id: 165
@@ -743,40 +719,230 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 166
-    m_Localized: Node Editor Text Size
+    m_Localized: "Taille du texte de l'\xE9diteur de n\u0153ud"
     m_Metadata:
       m_Items: []
   - m_Id: 167
-    m_Localized: Reduce the textsize so you can get more json on screen
+    m_Localized: "R\xE9duisez la taille du texte pour obtenir plus de json \xE0 l'\xE9cran"
     m_Metadata:
       m_Items: []
   - m_Id: 168
-    m_Localized: Node Editor Size
+    m_Localized: "Taille de l'\xE9diteur de n\u0153ud"
     m_Metadata:
       m_Items: []
   - m_Id: 169
-    m_Localized: How big the node editor should appear
+    m_Localized: "Quelle doit \xEAtre la taille de l'\xE9diteur de n\u0153uds"
     m_Metadata:
       m_Items: []
   - m_Id: 170
-    m_Localized: Node Editor
+    m_Localized: "\xC9diteur de n\u0153ud"
     m_Metadata:
       m_Items: []
   - m_Id: 171
-    m_Localized: DSP Buffer Size
+    m_Localized: Taille du buffer DSP
     m_Metadata:
       m_Items: []
   - m_Id: 172
-    m_Localized: Lower values reduce latency but may cause stuttering
+    m_Localized: "Des valeurs plus basses r\xE9duisent la latence mais peuvent causer
+      des saccades"
     m_Metadata:
       m_Items: []
   - m_Id: 173
     m_Localized: '{TextValue}'
     m_Metadata:
       m_Items:
-      - id: 15
+      - id: 0
   - m_Id: 174
-    m_Localized: Song
+    m_Localized: Musique
+    m_Metadata:
+      m_Items: []
+  - m_Id: 175
+    m_Localized: Modification rapide d'une note
+    m_Metadata:
+      m_Items: []
+  - m_Id: 176
+    m_Localized: Activer le raccourci Alt+WASDF pour changer rapidement la direction
+      d'une note
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345062612992
+    m_Localized: Counters+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2783503364096
+    m_Localized: Afficher des stats sur votre map.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4183771754496
+    m_Localized: Afficher le nombre de notes dans Counters+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4556741849088
+    m_Localized: Afficher les notes par seconde dans Counters+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4756105506816
+    m_Localized: Afficher les swings par seconde dans Counters+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4923839918080
+    m_Localized: Afficher le ratio des notes rouges/bleues dans Counters+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5194288640000
+    m_Localized: Afficher le nombre d'obstacles dans Counters+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5433380745216
+    m_Localized: "Afficher le nombre d'\xE9v\xE9nements dans Counters+"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5576540729344
+    m_Localized: Afficher le nombre de changements de BPM dans Counters+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5797878345728
+    m_Localized: Afficher le BPM actuel dans Counters+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6094344335360
+    m_Localized: "Afficher le temps pass\xE9 \xE0 mapper dans Counters+"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7740667375616
+    m_Localized: "Activ\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7946528010240
+    m_Localized: Afficher le nombre de notes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8101331382272
+    m_Localized: Afficher les notes par seconde
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8262946304000
+    m_Localized: Afficher les swings par seconde
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8468374925312
+    m_Localized: Afficher le ratio Rouge/Bleu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8718720348160
+    m_Localized: Afficher le nombre d'obstacles
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8904158916608
+    m_Localized: "Afficher le nombre d'\xE9v\xE9nements"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9070869917696
+    m_Localized: Afficher le nombre de changements de BPM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9291620331520
+    m_Localized: Afficher le BPM actuel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9443374444544
+    m_Localized: "Afficher le temps pass\xE9 \xE0 mapper"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1564790530682880
+    m_Localized: Afficher le nombre de bombes dans Counters+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1565145339441152
+    m_Localized: Afficher le nombre de bombes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1062316191744
+    m_Localized: "Avanc\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3517145853952
+    m_Localized: "Compense la latence audio en d\xE9calant les visuels pendant la
+      lecture"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4573925912576
+    m_Localized: Compensation de la latence audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5147308240896
+    m_Localized: '{TextValue} ms'
+    m_Metadata:
+      m_Items:
+      - id: 0
+  - m_Id: 3301721636864
+    m_Localized: "Modifie la transparence de l'arri\xE8re-plan de la grille"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4978382077952
+    m_Localized: '{TextValue}'
+    m_Metadata:
+      m_Items:
+      - id: 0
+  - m_Id: 23812497342464
+    m_Localized: Transparence de la grille
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1664580264005632
+    m_Localized: FPS max
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1664599280979968
+    m_Localized: "Ajuster la fr\xE9quence d'images maximale \xE0 laquelle CM s'ex\xE9cutera."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1894945813565440
+    m_Localized: Synchronisation verticale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1894950121115648
+    m_Localized: "Verrouillez la fr\xE9quence d'images de ChroMapper sur la fr\xE9quence
+      de rafra\xEEchissement de votre \xE9cran."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4089437985878016
+    m_Localized: "Rend l'\xE9chelle de l'\xE9diteur ind\xE9pendante du BPM de la
+      map"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4090246341505024
+    m_Localized: "\xC9chelle de l'\xE9diteur ind\xE9pendant BPM"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9689541752557568
+    m_Localized: "Visualisez l'\xE9v\xE9nement alpha Chroma en utilisant la hauteur
+      de l'\xE9v\xE9nement"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9689824679333888
+    m_Localized: Visualiser Chroma Alpha
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16675690602758144
+    m_Localized: "Lisse les lignes irr\xE9guli\xE8res"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16676035970138112
+    m_Localized: "Anticr\xE9nelage"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67494721340747776
+    m_Localized: '{TextValue}'
+    m_Metadata:
+      m_Items:
+      - id: 0
+  - m_Id: 67492742661058560
+    m_Localized: Scales the (total) rendering resolution for performance or visual
+      improvements.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67493661524013056
+    m_Localized: Render Scale
     m_Metadata:
       m_Items: []
   references:
@@ -784,64 +950,4 @@ MonoBehaviour:
     00000000:
       type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_Entries: 01000000
-    00000001:
-      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
-      data:
-        m_Entries: 42000000
-    00000002:
-      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
-      data:
-        m_Entries: 49000000
-    00000003:
-      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
-      data:
-        m_Entries: 83000000
-    00000004:
-      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
-      data:
-        m_Entries: 86000000
-    00000005:
-      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
-      data:
-        m_Entries: 87000000
-    00000006:
-      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
-      data:
-        m_Entries: 88000000
-    00000007:
-      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
-      data:
-        m_Entries: 89000000
-    00000008:
-      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
-      data:
-        m_Entries: 8a000000
-    00000009:
-      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
-      data:
-        m_Entries: 8b000000
-    0000000A:
-      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
-      data:
-        m_Entries: 8c000000
-    0000000B:
-      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
-      data:
-        m_Entries: 8d000000
-    0000000C:
-      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
-      data:
-        m_Entries: 8e000000
-    0000000D:
-      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
-      data:
-        m_Entries: 99000000
-    0000000E:
-      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
-      data:
-        m_Entries: 9c000000
-    0000000F:
-      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
-      data:
-        m_Entries: ad000000
+        m_Entries: 010000000000000042000000000000004900000000000000830000000000000086000000000000008700000000000000880000000000000089000000000000008a000000000000008b000000000000008c000000000000008d000000000000008e0000000000000099000000000000009c00000000000000ad0000000000000000b07a73ae0400000000b21e8704000000b0ba6917caef00

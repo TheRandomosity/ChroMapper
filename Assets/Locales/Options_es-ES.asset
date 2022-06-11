@@ -1,0 +1,948 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Options_es-ES
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es-ES
+  m_SharedData: {fileID: 11400000, guid: 3d3fb288927a2264891ce15662e46756, type: 2}
+  m_Metadata:
+    m_Items:
+    - id: 0
+  m_TableData:
+  - m_Id: 1
+    m_Localized: Ajustes - {tabName}
+    m_Metadata:
+      m_Items:
+      - id: 0
+  - m_Id: 2
+    m_Localized: Opciones varias
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3
+    m_Localized: Discord Rich Presence
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4
+    m_Localized: Modo oscuro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5
+    m_Localized: "Instalaci\xF3n de Beat Saber"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6
+    m_Localized: Intervalo de auto-guardado (minutos)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7
+    m_Localized: "Transiciones del men\xFA de pausa instant\xE1neas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8
+    m_Localized: "Mensajes de carga \xFAtiles"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9
+    m_Localized: Opciones del editor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10
+    m_Localized: Escala del editor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11
+    m_Localized: Escala de editor precisa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12
+    m_Localized: "Rotaci\xF3n 360/90"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13
+    m_Localized: "No colocar paredes de duraci\xF3n 0"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15
+    m_Localized: Notas precisas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16
+    m_Localized: "C\xE1lculo alternativo del tama\xF1o de Hyper Walls"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17
+    m_Localized: "Cuadr\xEDcula de notas anteriores"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18
+    m_Localized: "Velocidad de la canci\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19
+    m_Localized: Cantidad de carriles de notas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20
+    m_Localized: "Ajustes de rat\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21
+    m_Localized: "Selecci\xF3n en caja"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22
+    m_Localized: Destacar notas colocadas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23
+    m_Localized: Opciones de carga
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24
+    m_Localized: Cargar notas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25
+    m_Localized: Cargar eventos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26
+    m_Localized: "Cargar obst\xE1culos"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27
+    m_Localized: Cargar otros elementos del mapa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28
+    m_Localized: Volumen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29
+    m_Localized: Principal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30
+    m_Localized: "Metr\xF3nomo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31
+    m_Localized: Sonido de golpe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32
+    m_Localized: Sonidos de nota
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33
+    m_Localized: Sonido de golpe de notas rojas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34
+    m_Localized: Sonido de golpe de notas azules
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35
+    m_Localized: Sonido de golpe de bombas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36
+    m_Localized: Sonidos de golpe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37
+    m_Localized: Editor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38
+    m_Localized: Forma de onda
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39
+    m_Localized: Emular Chroma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40
+    m_Localized: Luces RGB
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41
+    m_Localized: Reflejos de entorno
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42
+    m_Localized: Colorear paredes falsas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43
+    m_Localized: "Renderizar l\xEDneas de comp\xE1s sobre todo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44
+    m_Localized: Bloom de alta calidad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45
+    m_Localized: Visualizar gradientes de Chroma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 46
+    m_Localized: Bloques simples
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47
+    m_Localized: "Campo de visi\xF3n de la c\xE1mara"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48
+    m_Localized: Trozos cargados
+    m_Metadata:
+      m_Items: []
+  - m_Id: 49
+    m_Localized: "Offset de aparici\xF3n de objetos"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50
+    m_Localized: "Offset de desaparici\xF3n de objetos"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52
+    m_Localized: Visuales
+    m_Metadata:
+      m_Items: []
+  - m_Id: 53
+    m_Localized: Seguir el workflow con la forma de onda
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54
+    m_Localized: Habilitar el editor de nodo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55
+    m_Localized: Atajo del editor de nodo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56
+    m_Localized: "Sensibilidad del rat\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57
+    m_Localized: "Velocidad de la c\xE1mara"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 58
+    m_Localized: Misc.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 59
+    m_Localized: Invertir desplazamiento preciso
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60
+    m_Localized: "Invertir desplazamiento de la l\xEDnea de tiempo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61
+    m_Localized: <color=red><u>Advertencia</u></color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 62
+    m_Localized: "Para reconfigurar los atajos de teclado, haz clic en cualquier
+      caja de texto relacionada al atajo que quieres reconfigurar. Luego, presiona
+      cada tecla en orden de modificadores (Ctrl, Shift, Alt), y finalmente la tecla
+      base.\n\nLa mayor\xEDa de los atajos de teclado est\xE1n restringidos a una
+      composici\xF3n de 3 teclas: Una tecla base y 2 modificadores. Puedes presionar
+      la tecla Enter en cualquier momento para terminar de configurar el atajo con
+      2 teclas, o solo una.\n\nPresta atenci\xF3n a c\xF3mo est\xE1n configurados
+      los atajos de teclado. Algunos atajos, como el de \"Mover c\xE1mara\", requieren
+      que todas las composiciones est\xE9n completas para poder finalizar su configuraci\xF3n.
+      Estos atajos usualmente se ver\xE1n como si estuviesen hechos para moverse,
+      o con un bot\xF3n espec\xEDfico para \"positivo\" y uno para \"negativo\"."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 63
+    m_Localized: Reestablecer atajos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65
+    m_Localized: Plugins cargados
+    m_Metadata:
+      m_Items: []
+  - m_Id: 66
+    m_Localized: 'Plugins cargados: {Count}'
+    m_Metadata:
+      m_Items:
+      - id: 0
+  - m_Id: 67
+    m_Localized: "Informaci\xF3n de plugin"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68
+    m_Localized: "ChroMapper le permite a los desarrolladores crear y compartir plugins.\n\nLos
+      desarrolladores de ChroMapper no ser\xE1n responsables de cualquier da\xF1o
+      causado por plugins cargados. Depende del usuario decidir qu\xE9 plugins instalar.\n\nRecomendamos
+      buscar plugins creados por desarrolladores confiables. Por ejemplo, busca plugins
+      de ChroMapper que sean de c\xF3digo abierto, en donde su c\xF3digo fuente est\xE9
+      disponible p\xFAblicamente para revisar y tomar decisiones en base a ello."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69
+    m_Localized: <color=red><u>Advertencia</u></color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70
+    m_Localized: "Las siguientes configuraciones no est\xE1n completas al 100%. Pueden
+      cambiar, o ser removidas por completo. Si est\xE1s buscando una experiencia
+      de ChroMapper libre de errores, este no es el lugar que buscas.\n\nO tal vez
+      s\xF3lo son opciones nuevas y todav\xEDa no les he dado un lugar definido.
+      Alguna de las dos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71
+    m_Localized: "Configuraci\xF3n experimental"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72
+    m_Localized: "Precisi\xF3n decimal del valor de tiempo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 73
+    m_Localized: '{TextValue} decimal(es)'
+    m_Metadata:
+      m_Items:
+      - id: 0
+  - m_Id: 74
+    m_Localized: "Por cu\xE1ntos decimales redondear los valores de \"_time\" por
+      cada objeto del mapa visible cuando se guarda al disco.\nMenor precisi\xF3n
+      significa m\xE1s posibilidad de errores, pero puede ahorrar respacio en mapas
+      m\xE1s complejos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 75
+    m_Localized: "Gu\xEDa de desarrollo de plugins"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80
+    m_Localized: "\xBFDeber\xEDamos cargar obst\xE1culos?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 81
+    m_Localized: "Cambiar la escala de la cuadr\xEDcula de notas anteriores."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 82
+    m_Localized: 'Activa o desactiva las notas azules cuando pasan.
+
+      (Incluye
+      variantes para ChromaToggle)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 83
+    m_Localized: "Cambiar cada cu\xE1nto tiempo el auto-guardado se activa."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 84
+    m_Localized: Destaca las notas recientemente colocadas en magenta.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 85
+    m_Localized: "La escala del editor ser\xE1 determinada por varias estad\xEDsticas
+      del mapa, incluyendo la velocidad de salto de notas (NJS) y su BPM.\nRecomendado
+      solo para previsualizar tu mapa. Esto anular\xE1 la opci\xF3n de escala del
+      editor."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 86
+    m_Localized: "Invierte la direcci\xF3n del desplazamiento al cambiar la precisi\xF3n
+      del paso."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 87
+    m_Localized: "\xBFDeseas cargar los eventos del mapa?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 88
+    m_Localized: Renderizado de bloques menos elegante y con mayor contraste
+    m_Metadata:
+      m_Items: []
+  - m_Id: 89
+    m_Localized: Cantidad de intervalos de 5 golpes a mostrar mientras se edita.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 90
+    m_Localized: Gira los objetos del mapa y el editor para visualizar mejor un nivel
+      en 360 grados.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 91
+    m_Localized: "\xBFDeseas cargar otros elementos del mapa?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 92
+    m_Localized: "Invierte la direcci\xF3n de desplazamiento del raton al cambiar
+      el tiempo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 93
+    m_Localized: Mostrar mensajes de carga al cambiar de pantalla.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 94
+    m_Localized: "C\xF3mo de lejos apareceran las notas y los eventos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 95
+    m_Localized: 'Toggles Red Notes dinging when they pass.
+
+      (Includes ChromaToggle
+      variants)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 96
+    m_Localized: Activa/desactiva Discord RPC en ChroMapper.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 97
+    m_Localized: Take half jump into account when loading hyper (negative duration)
+      walls. Will require a restart of the editor.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 98
+    m_Localized: "Hace que sea imposible colocar muros de duraci\xF3n 0."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 99
+    m_Localized: "\xBFCuanto espacio entre medidas?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 100
+    m_Localized: "\xBFDeseas cargar las notas?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101
+    m_Localized: "\xBFC\xF3mo de r\xE1pido debe reproducirse la canci\xF3n?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 102
+    m_Localized: Activa/desactiva el sonido de las bombas cuando pasan.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 103
+    m_Localized: "Si mantienes pulsada la tecla Shift mientras colocas muros o notas,
+      aparecer\xE1 una cuadr\xEDcula extendida con el encaje desactivado."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104
+    m_Localized: Activa/desactiva los reflejos causados por las luces y los objetos.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105
+    m_Localized: "Hace que los textos de la l\xEDnea de medida aparezcan encima de
+      <i>todo</i>. Puede causar algunos problemas cuando se mira a trav\xE9s de una
+      nota."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106
+    m_Localized: "Cada evento con un gradiente Chroma 2.0 asociado generar\xE1 una
+      vista previa en la cuadr\xEDcula 3D."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 107
+    m_Localized: "Mostrar forma de onda de la canci\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 108
+    m_Localized: En lugar de seleccionar, presione N para activar/desactivar el editor
+      de nodos.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 109
+    m_Localized: Cambia cuantos carriles usa tu mapa.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 110
+    m_Localized: "Hace que la transici\xF3n al men\xFA de pausa sea instant\xE1nea."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111
+    m_Localized: "Reproduce el efecto resplandor a plena o media resoluci\xF3n. Se
+      recomienda mantenerlo a m\xE1xima resoluci\xF3n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112
+    m_Localized: "Activa o desactiva caracter\xEDsticas de Chroma, como la propagaci\xF3n
+      entre anillos"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 113
+    m_Localized: "Alterna el Tema Oscuro (no afecta al men\xFA de opciones)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114
+    m_Localized: "C\xF3mo de lejos desaparecer\xE1n las notas y los eventos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115
+    m_Localized: "Activa el editor de nodos. \xA1Prueba a seleccionar un objeto!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 116
+    m_Localized: "Activa o desactiva la iluminaci\xF3n de Chroma RGB"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 117
+    m_Localized: "Cambia el campo de visi\xF3n de la c\xE1mara"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 118
+    m_Localized: "Colorea los muros de anchura y duraci\xF3n negativa de forma distinta
+      a los muros est\xE1ndar."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 119
+    m_Localized: Permite que la forma de onda cambie de lado al alternar entre espacios
+      de trabajo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 120
+    m_Localized: "Cambia c\xF3mo de r\xE1pido se mueve la c\xE1mara."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 121
+    m_Localized: "Usa Ctrl-Click para dibujar una caja y seleccionar en lugar de
+      pintar tu selecci\xF3n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 122
+    m_Localized: "C\xF3mo de rapido gira la c\xE1mara."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123
+    m_Localized: "Cambia el sonido que escuchas cuando una nota pasa a trav\xE9s
+      de la cuadr\xEDcula."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 124
+    m_Localized: "Ubicaci\xF3n de tu instalaci\xF3n de Beat Saber."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 125
+    m_Localized: General
+    m_Metadata:
+      m_Items: []
+  - m_Id: 126
+    m_Localized: Mapeo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 127
+    m_Localized: Audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 128
+    m_Localized: "Gr\xE1ficos"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 129
+    m_Localized: Controles
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130
+    m_Localized: Combinaciones de teclas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 131
+    m_Localized: Extensiones
+    m_Metadata:
+      m_Items:
+      - id: 0
+  - m_Id: 132
+    m_Localized: Experimentales
+    m_Metadata:
+      m_Items: []
+  - m_Id: 133
+    m_Localized: "Cr\xE9ditos"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 134
+    m_Localized: '{TextValue}'
+    m_Metadata:
+      m_Items:
+      - id: 0
+  - m_Id: 135
+    m_Localized: '{TextValue}'
+    m_Metadata:
+      m_Items:
+      - id: 0
+  - m_Id: 136
+    m_Localized: '{TextValue}'
+    m_Metadata:
+      m_Items:
+      - id: 0
+  - m_Id: 137
+    m_Localized: "{TextValue}\xB0"
+    m_Metadata:
+      m_Items:
+      - id: 0
+  - m_Id: 138
+    m_Localized: '{TextValue}'
+    m_Metadata:
+      m_Items:
+      - id: 0
+  - m_Id: 139
+    m_Localized: '{TextValue} golpes'
+    m_Metadata:
+      m_Items:
+      - id: 0
+  - m_Id: 140
+    m_Localized: '{TextValue} golpes'
+    m_Metadata:
+      m_Items:
+      - id: 0
+  - m_Id: 141
+    m_Localized: '{TextValue}'
+    m_Metadata:
+      m_Items:
+      - id: 0
+  - m_Id: 142
+    m_Localized: '{TextValue}'
+    m_Metadata:
+      m_Items:
+      - id: 0
+  - m_Id: 143
+    m_Localized: "Restringe el visor de rotaci\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 144
+    m_Localized: "Restringe el visor de rotaci\xF3n entre 0 y 360."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 145
+    m_Localized: Idioma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 146
+    m_Localized: Localizar la interfaz de usuario
+    m_Metadata:
+      m_Items: []
+  - m_Id: 147
+    m_Localized: "\xBFEst\xE1 seguro de que desea restablecer las combinaciones de
+      teclado?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 148
+    m_Localized: Es posible que ChroMapper necesite ser reiniciado para que los cambios
+      se apliquen.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 149
+    m_Localized: "Cuadr\xEDculas con alto contraste"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 150
+    m_Localized: Incrementa el contraste entre las lineas de medida y su fondo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 151
+    m_Localized: Permitir eventos personalizados
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152
+    m_Localized: Permitir el uso de eventos personalizados en tus mapas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153
+    m_Localized: '{TextValue}'
+    m_Metadata:
+      m_Items:
+      - id: 0
+  - m_Id: 154
+    m_Localized: Escala de la interfaz de usuario
+    m_Metadata:
+      m_Items: []
+  - m_Id: 155
+    m_Localized: Controla la escala para todos los elementos de la interfaz de usuario.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 156
+    m_Localized: '{TextValue}'
+    m_Metadata:
+      m_Items:
+      - id: 0
+  - m_Id: 157
+    m_Localized: Modelo de eventos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 158
+    m_Localized: Change lighting event models.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 159
+    m_Localized: "Canal de publicaci\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 160
+    m_Localized: "Usa desarrollo para obtener las \xFAltimas funcionalidades o correciones.
+      Estable si quieres evitar que se produzcan fallos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 161
+    m_Localized: "Servidor de publicaci\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 162
+    m_Localized: De donde descargar actualizaciones del editor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 163
+    m_Localized: Eso no parece correcto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 164
+    m_Localized: "Validando servidor de publicaci\xF3n..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 165
+    m_Localized: "\xA1Todo bien!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 166
+    m_Localized: "Tama\xF1o del texto del editor de nodos"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 167
+    m_Localized: "Reduce el tama\xF1o del texto para poder ver m\xE1s contenido del
+      json en la pantalla"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 168
+    m_Localized: "Tama\xF1o del editor de nodos"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 169
+    m_Localized: "C\xF3mo de grande debe aparecer el editor de nodos"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 170
+    m_Localized: Editor de nodos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 171
+    m_Localized: "Tama\xF1o del buffer DSP"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 172
+    m_Localized: "Valores bajos pueden reducir la latencia pero podr\xEDan provocar
+      tirones"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 173
+    m_Localized: '{TextValue}'
+    m_Metadata:
+      m_Items:
+      - id: 0
+  - m_Id: 174
+    m_Localized: "Canci\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 175
+    m_Localized: "Edici\xF3n r\xE1pida de notas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 176
+    m_Localized: "Activa Alt+WASDF para cambiar r\xE1pidamente la direcci\xF3n de
+      las notas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345062612992
+    m_Localized: Counters+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2783503364096
+    m_Localized: Show stats about your map.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4183771754496
+    m_Localized: Show Note count in Counters+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4556741849088
+    m_Localized: Show Notes Per Second in Counters+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4756105506816
+    m_Localized: Show Swings Per Second in Counters+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4923839918080
+    m_Localized: Show Red/Blue Note Ratio in Counters+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5194288640000
+    m_Localized: Show Obstacle count in Counters+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5433380745216
+    m_Localized: Show Event count in Counters+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5576540729344
+    m_Localized: Show BPM Change count in Counters+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5797878345728
+    m_Localized: Show Current BPM in Counters+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6094344335360
+    m_Localized: Show Time Spent Mapping in Counters+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7740667375616
+    m_Localized: Habilitado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7946528010240
+    m_Localized: "Mostrar n\xFAmero de notas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8101331382272
+    m_Localized: Mostrar notas por segundo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8262946304000
+    m_Localized: Show Swings Per Second
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8468374925312
+    m_Localized: "Mostrar proproci\xF3n Rojo/Azul"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8718720348160
+    m_Localized: Mostrar contador de obstaculos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8904158916608
+    m_Localized: Mostrar contador de eventos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9070869917696
+    m_Localized: Show BPM Change Count
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9291620331520
+    m_Localized: Mostrar los BPM actuales
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9443374444544
+    m_Localized: Show Time Spent Mapping
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1564790530682880
+    m_Localized: Show Bomb count in Counters+
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1565145339441152
+    m_Localized: "Mostrar n\xFAmero de bombas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1062316191744
+    m_Localized: Avanzado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3517145853952
+    m_Localized: Compensates for audio latency by offsetting visuals during playback
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4573925912576
+    m_Localized: "Compensaci\xF3n de la latencia de audio"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5147308240896
+    m_Localized: '{TextValue} ms'
+    m_Metadata:
+      m_Items:
+      - id: 0
+  - m_Id: 3301721636864
+    m_Localized: Changes the transparency of the grid background
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4978382077952
+    m_Localized: '{TextValue}'
+    m_Metadata:
+      m_Items:
+      - id: 0
+  - m_Id: 23812497342464
+    m_Localized: "Trasparencia de la cuadr\xEDcula"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1664580264005632
+    m_Localized: "FPS M\xE1ximos"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1664599280979968
+    m_Localized: Tweak the maximum framerate that CM will run at.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1894945813565440
+    m_Localized: VSync
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1894950121115648
+    m_Localized: Fijar la velocidad de fotogramas de ChroMapper a la tasa de refresco
+      de tu pantalla.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4089437985878016
+    m_Localized: Makes Editor Scale independent of map BPM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4090246341505024
+    m_Localized: BPM Independent Editor Scale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9689541752557568
+    m_Localized: Visualize Chroma event alpha using the height of the event
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9689824679333888
+    m_Localized: Visualize Chroma Alpha
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16675690602758144
+    m_Localized: Smooths out jagged lines
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16676035970138112
+    m_Localized: Anti-Aliasing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67494721340747776
+    m_Localized: '{TextValue}'
+    m_Metadata:
+      m_Items:
+      - id: 0
+  - m_Id: 67492742661058560
+    m_Localized: Scales the (total) rendering resolution for performance or visual
+      improvements.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67493661524013056
+    m_Localized: Render Scale
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1
+    00000000:
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 010000000000000042000000000000004900000000000000830000000000000086000000000000008700000000000000880000000000000089000000000000008a000000000000008b000000000000008c000000000000008d000000000000008e0000000000000099000000000000009c00000000000000ad0000000000000000b07a73ae0400000000b21e8704000000b0ba6917caef00

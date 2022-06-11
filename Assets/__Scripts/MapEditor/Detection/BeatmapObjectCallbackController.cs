@@ -2,46 +2,115 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 //Name and idea totally not stolen directly from Beat Saber
-public class BeatmapObjectCallbackController : MonoBehaviour {
+public class BeatmapObjectCallbackController : MonoBehaviour
+{
+    private static readonly int eventsToLookAhead = 75;
+    private static readonly int notesToLookAhead = 25;
 
-    [SerializeField] NotesContainer notesContainer;
-    [SerializeField] EventsContainer eventsContainer;
+    [SerializeField] private NotesContainer notesContainer;
+    [SerializeField] private EventsContainer eventsContainer;
 
-    [SerializeField] AudioTimeSyncController timeSyncController;
+    [SerializeField] private AudioTimeSyncController timeSyncController;
+    [SerializeField] private UIMode uiMode;
 
     [SerializeField] private bool useOffsetFromConfig = true;
+
     [Tooltip("Whether or not to use the Despawn or Spawn offset from settings.")]
-    [SerializeField] private bool useDespawnOffset = false;
-    [SerializeField] public float offset = 0;
+    [SerializeField]
+    private bool useDespawnOffset;
 
-    [SerializeField] int nextNoteIndex = 0;
-    [SerializeField] int nextEventIndex = 0;
+    [FormerlySerializedAs("offset")] public float Offset;
 
-    float curTime;
+    [SerializeField] private int nextNoteIndex;
+    [SerializeField] private int nextEventIndex;
+
+    [FormerlySerializedAs("useAudioTime")] public bool UseAudioTime;
+
+    private readonly HashSet<BeatmapObject> nextEvents = new HashSet<BeatmapObject>();
+    private readonly HashSet<BeatmapObject> nextNotes = new HashSet<BeatmapObject>();
+    private HashSet<BeatmapObject> allEvents = new HashSet<BeatmapObject>();
+    private HashSet<BeatmapObject> allNotes = new HashSet<BeatmapObject>();
+    private HashSet<BeatmapObject> queuedToClear = new HashSet<BeatmapObject>();
+
+    private float curTime;
+    public Action<bool, int, BeatmapObject> EventPassedThreshold;
 
     public Action<bool, int, BeatmapObject> NotePassedThreshold;
-    public Action<bool, int, BeatmapObject> EventPassedThreshold;
-    public Action<bool, int> RecursiveNoteCheckFinished;
     public Action<bool, int> RecursiveEventCheckFinished;
-    
-    private List<BeatmapObject> nextEvents = new List<BeatmapObject>();
-    private Queue<BeatmapObject> allEvents = new Queue<BeatmapObject>();
-    private List<BeatmapObject> nextNotes = new List<BeatmapObject>();
-    private Queue<BeatmapObject> allNotes = new Queue<BeatmapObject>();
-    private static int eventsToLookAhead = 75;
-    private static int notesToLookAhead = 25;
+    public Action<bool, int> RecursiveNoteCheckFinished;
 
-    private void OnEnable() {
-        timeSyncController.OnPlayToggle += OnPlayToggle;
+    private void Start()
+    {
+        notesContainer.ObjectSpawnedEvent += NotesContainer_ObjectSpawnedEvent;
+        notesContainer.ObjectDeletedEvent += NotesContainer_ObjectDeletedEvent;
+        eventsContainer.ObjectSpawnedEvent += EventsContainer_ObjectSpawnedEvent;
+        eventsContainer.ObjectDeletedEvent += EventsContainer_ObjectDeletedEvent;
     }
 
-    private void OnDisable() {
-        timeSyncController.OnPlayToggle -= OnPlayToggle;
+    private void LateUpdate()
+    {
+        if (useOffsetFromConfig)
+        {
+            if (UIMode.SelectedMode == UIModeType.Playing || UIMode.SelectedMode == UIModeType.Preview)
+            {
+                if (useDespawnOffset)
+                {
+                    Offset = 0;
+                }
+                else
+                {
+                    var songNoteJumpSpeed = BeatSaberSongContainer.Instance.DifficultyData.NoteJumpMovementSpeed;
+                    var songStartBeatOffset = BeatSaberSongContainer.Instance.DifficultyData.NoteJumpStartBeatOffset;
+                    var bpm = BeatSaberSongContainer.Instance.Song.BeatsPerMinute;
+                    Offset = SpawnParameterHelper.CalculateHalfJumpDuration(songNoteJumpSpeed, songStartBeatOffset, bpm);
+                }
+            }
+            else
+            {
+                Offset = useDespawnOffset
+                    ? Settings.Instance.Offset_Despawning * -1
+                    : Settings.Instance.Offset_Spawning;
+            }
+
+            if (!useDespawnOffset) Shader.SetGlobalFloat("_ObstacleFadeRadius", Offset * EditorScaleController.EditorScale);
+        }
+
+        if (queuedToClear.Count > 0)
+        {
+            foreach (var toClear in queuedToClear)
+            {
+                if (toClear is BeatmapNote)
+                {
+                    allNotes.Remove(toClear);
+                    nextNotes.Remove(toClear);
+                }
+                else if (toClear is MapEvent)
+                {
+                    allEvents.Remove(toClear);
+                    nextEvents.Remove(toClear);
+                }
+            }
+
+            queuedToClear.Clear();
+        }
+
+        if (timeSyncController.IsPlaying)
+        {
+            curTime = UseAudioTime ? timeSyncController.CurrentSongBeats : timeSyncController.CurrentBeat;
+            RecursiveCheckNotes(true, true);
+            RecursiveCheckEvents(true, true);
+        }
     }
 
-    private void OnPlayToggle(bool playing) {
+    private void OnEnable() => timeSyncController.PlayToggle += OnPlayToggle;
+
+    private void OnDisable() => timeSyncController.PlayToggle -= OnPlayToggle;
+
+    private void OnPlayToggle(bool playing)
+    {
         if (playing)
         {
             CheckAllNotes(false);
@@ -49,73 +118,103 @@ public class BeatmapObjectCallbackController : MonoBehaviour {
         }
     }
 
-    private void LateUpdate()
-    {
-        if (useOffsetFromConfig)
-        {
-            if (useDespawnOffset) offset = Settings.Instance.Offset_Despawning * -1;
-            else offset = Settings.Instance.Offset_Spawning;
-        }
-        if (timeSyncController.IsPlaying) {
-            curTime = timeSyncController.CurrentBeat;
-            RecursiveCheckNotes(true, true);
-            RecursiveCheckEvents(true, true);
-        }
-    }
-
     private void CheckAllNotes(bool natural)
     {
         //notesContainer.SortObjects();
-        curTime = timeSyncController.CurrentBeat;
+        curTime = UseAudioTime ? timeSyncController.CurrentSongBeats : timeSyncController.CurrentBeat;
         allNotes.Clear();
-        allNotes = new Queue<BeatmapObject>(notesContainer.LoadedObjects);
-        while (allNotes.Count > 0 && allNotes.Peek()._time < curTime + offset)
-        {
-            allNotes.Dequeue();
-        }
+        allNotes = new HashSet<BeatmapObject>(notesContainer.LoadedObjects.Where(x => x.Time >= curTime + Offset));
+
         nextNoteIndex = notesContainer.LoadedObjects.Count - allNotes.Count;
         RecursiveNoteCheckFinished?.Invoke(natural, nextNoteIndex - 1);
         nextNotes.Clear();
-        for (int i = 0; i < notesToLookAhead; i++)
-            if (allNotes.Any()) nextNotes.Add(allNotes.Dequeue());
+
+        for (var i = 0; i < notesToLookAhead; i++)
+        {
+            if (allNotes.Count > 0) QueueNextObject(allNotes, nextNotes);
+        }
     }
 
     private void CheckAllEvents(bool natural)
     {
         allEvents.Clear();
-        allEvents = new Queue<BeatmapObject>(eventsContainer.LoadedObjects);
-        while (allEvents.Count > 0 && allEvents.Peek()._time < curTime + offset)
-        {
-            allEvents.Dequeue();
-        }
+        allEvents = new HashSet<BeatmapObject>(eventsContainer.LoadedObjects.Where(x => x.Time >= curTime + Offset));
+
         nextEventIndex = eventsContainer.LoadedObjects.Count - allEvents.Count;
         RecursiveEventCheckFinished?.Invoke(natural, nextEventIndex - 1);
         nextEvents.Clear();
-        for (int i = 0; i < eventsToLookAhead; i++)
-            if (allEvents.Any()) nextEvents.Add(allEvents.Dequeue());
+
+        for (var i = 0; i < eventsToLookAhead; i++)
+        {
+            if (allEvents.Count > 0) QueueNextObject(allEvents, nextEvents);
+        }
     }
 
     private void RecursiveCheckNotes(bool init, bool natural)
     {
-        List<BeatmapObject> passed = new List<BeatmapObject>(nextNotes.Where(x => x._time <= curTime + offset));
-        foreach (BeatmapObject newlyAdded in passed)
+        var passed = nextNotes.Where(x => x.Time <= curTime + Offset).ToArray();
+        foreach (var newlyAdded in passed)
         {
             if (natural) NotePassedThreshold?.Invoke(init, nextNoteIndex, newlyAdded);
             nextNotes.Remove(newlyAdded);
-            if (allNotes.Any() && natural) nextNotes.Add(allNotes.Dequeue());
+            if (allNotes.Count > 0 && natural) QueueNextObject(allNotes, nextNotes);
             nextNoteIndex++;
         }
     }
 
     private void RecursiveCheckEvents(bool init, bool natural)
     {
-        List<BeatmapObject> passed = new List<BeatmapObject>(nextEvents.Where(x => x._time <= curTime + offset));
-        foreach (BeatmapObject newlyAdded in passed)
+        var passed = nextEvents.Where(x => x.Time <= curTime + Offset).ToArray();
+        foreach (var newlyAdded in passed)
         {
             if (natural) EventPassedThreshold?.Invoke(init, nextEventIndex, newlyAdded);
             nextEvents.Remove(newlyAdded);
-            if (allEvents.Any() && natural) nextEvents.Add(allEvents.Dequeue());
+            if (allEvents.Count > 0 && natural) QueueNextObject(allEvents, nextEvents);
             nextEventIndex++;
         }
+    }
+
+    private void NotesContainer_ObjectSpawnedEvent(BeatmapObject obj) => OnObjSpawn(obj, nextNotes);
+
+    private void NotesContainer_ObjectDeletedEvent(BeatmapObject obj) => OnObjDeleted(obj);
+
+    private void EventsContainer_ObjectSpawnedEvent(BeatmapObject obj) => OnObjSpawn(obj, nextEvents);
+
+    private void EventsContainer_ObjectDeletedEvent(BeatmapObject obj) => OnObjDeleted(obj);
+
+    private void OnObjSpawn(BeatmapObject obj, HashSet<BeatmapObject> nextObjects)
+    {
+        if (!timeSyncController.IsPlaying) return;
+
+        if (obj.Time >= timeSyncController.CurrentBeat)
+        {
+            nextObjects.Add(obj);
+        }
+    }
+
+    private void OnObjDeleted(BeatmapObject obj)
+    {
+        if (!timeSyncController.IsPlaying) return;
+
+        if (obj.Time >= timeSyncController.CurrentBeat)
+        {
+            queuedToClear.Add(obj);
+        }
+    }
+
+    private void QueueNextObject(HashSet<BeatmapObject> allObjs, HashSet<BeatmapObject> nextObjs)
+    {
+        // Assumes that the "Count > 0" check happens before this is called
+        var first = allObjs.First();
+        nextObjs.Add(first);
+        allObjs.Remove(first);
+    }
+
+    private void OnDestroy()
+    {
+        notesContainer.ObjectSpawnedEvent -= NotesContainer_ObjectSpawnedEvent;
+        notesContainer.ObjectDeletedEvent -= NotesContainer_ObjectDeletedEvent;
+        eventsContainer.ObjectSpawnedEvent -= EventsContainer_ObjectSpawnedEvent;
+        eventsContainer.ObjectDeletedEvent -= EventsContainer_ObjectDeletedEvent;
     }
 }

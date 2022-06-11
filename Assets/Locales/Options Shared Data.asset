@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
   m_Name: Options Shared Data
   m_EditorClassIdentifier: 
-  m_NextAvailableId: 175
   m_TableCollectionName: Options
   m_TableCollectionNameGuidString: 3d3fb288927a2264891ce15662e46756
   m_Entries:
@@ -66,10 +65,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 13
     m_Key: map.zeroduration
-    m_Metadata:
-      m_Items: []
-  - m_Id: 14
-    m_Key: map.countersplus
     m_Metadata:
       m_Items: []
   - m_Id: 15
@@ -306,10 +301,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 75
     m_Key: plugins.guide
-    m_Metadata:
-      m_Items: []
-  - m_Id: 76
-    m_Key: map.countersplus.tooltip
     m_Metadata:
       m_Items: []
   - m_Id: 80
@@ -621,11 +612,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 157
-    m_Key: graphics.pyramideventmodels
+    m_Key: graphics.eventmodels
     m_Metadata:
       m_Items: []
   - m_Id: 158
-    m_Key: graphics.pyramideventmodels.tooltip
+    m_Key: graphics.eventmodels.tooltip
     m_Metadata:
       m_Items: []
   - m_Id: 159
@@ -692,7 +683,370 @@ MonoBehaviour:
     m_Key: volume.song
     m_Metadata:
       m_Items: []
+  - m_Id: 175
+    m_Key: map.quickedit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 176
+    m_Key: map.quickedit.tooltip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1698793607168
+    m_Key: misc.questadb
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1897456816128
+    m_Key: misc.questadb.tooltip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345062612992
+    m_Key: countersplus.heading
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2783503364096
+    m_Key: countersplus.enabled.tooltip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4183771754496
+    m_Key: countersplus.shownotes.tooltip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4556741849088
+    m_Key: countersplus.shownps.tooltip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4756105506816
+    m_Key: countersplus.showsps.tooltip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4923839918080
+    m_Key: countersplus.showredblueratio.tooltip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5194288640000
+    m_Key: countersplus.showobstacles.tooltip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5433380745216
+    m_Key: countersplus.showevents.tooltip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5576540729344
+    m_Key: countersplus.showbpmchanges.tooltip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5797878345728
+    m_Key: countersplus.showcurrentbpm.tooltip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6094344335360
+    m_Key: countersplus.showtimemapping.tooltip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7740667375616
+    m_Key: countersplus.enabled
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7946528010240
+    m_Key: countersplus.shownotes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8101331382272
+    m_Key: countersplus.shownps
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8262946304000
+    m_Key: countersplus.showsps
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8468374925312
+    m_Key: countersplus.showredblueratio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8718720348160
+    m_Key: countersplus.showobstacles
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8904158916608
+    m_Key: countersplus.showevents
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9070869917696
+    m_Key: countersplus.showbpmchanges
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9291620331520
+    m_Key: countersplus.showcurrentbpm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9443374444544
+    m_Key: countersplus.showtimemapping
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1564790530682880
+    m_Key: countersplus.showbombcount.tooltip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1565145339441152
+    m_Key: countersplus.showbombs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1062316191744
+    m_Key: audioadvanced.heading
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3517145853952
+    m_Key: audioadvanced.latencycomp.tooltip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4573925912576
+    m_Key: audioadvanced.latencycomp
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5147308240896
+    m_Key: audioadvanced.latencycomp.info
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3301721636864
+    m_Key: graphics.gridtransparency.tooltip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4978382077952
+    m_Key: graphics.gridtransparency.info
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23812497342464
+    m_Key: graphics.gridtransparency
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1664580264005632
+    m_Key: misc.maxfps
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1664599280979968
+    m_Key: misc.maxfps.tooltip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1894945813565440
+    m_Key: misc.vsync
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1894950121115648
+    m_Key: misc.vsync.tooltip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4089437985878016
+    m_Key: map.scale.independent.tooltip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4090246341505024
+    m_Key: map.scale.independent
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9689541752557568
+    m_Key: graphics.alpha.tooltip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9689824679333888
+    m_Key: graphics.alpha
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16675690602758144
+    m_Key: graphics.antialiasing.tooltip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16676035970138112
+    m_Key: graphics.antialiasing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67492742661058560
+    m_Key: graphics.renderscaletooltip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67493661524013056
+    m_Key: graphics.renderscale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67494721340747776
+    m_Key: graphics.renderscale.info
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3768991576559616
+    m_Key: quest.success
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3769025302958080
+    m_Key: quest.export
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3769067959029760
+    m_Key: quest.adb_error_download
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3769095658213376
+    m_Key: quest.adb_not_found
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3777059370635263
+    m_Key: quest.downloading
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3777059370635264
+    m_Key: quest.adb_finished_downloading
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3779515244679168
+    m_Key: quest.extracting_download
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21544433260560384
+    m_Key: quest.install_adb
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71906481403138048
+    m_Key: quest.downloading_progress
+    m_Metadata:
+      m_Items: []
+  - m_Id: 91579491578740736
+    m_Key: tab.appearance
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101771971410460672
+    m_Key: trackappearance.heading
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101773637585141760
+    m_Key: misc.instantloadingtransitions.tooltip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101773995594153984
+    m_Key: misc.instantloadingtransitions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101788523392335872
+    m_Key: graphics.tracklength.tooltip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101788529759289344
+    m_Key: graphics.tracklength
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101795760294789120
+    m_Key: graphics.hideplatformobjects.tooltip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101795765399257088
+    m_Key: graphics.hideplatformobjects
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101802838346366976
+    m_Key: graphics.passednotetransparency.tooltip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101802902695378944
+    m_Key: graphics.passednotetransparency
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101855016515731456
+    m_Key: editormapinfo.heading
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101855364424859648
+    m_Key: mapping.displaysongdetails.tooltip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101855374591852544
+    m_Key: mapping.displaysongdetails
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101855382842048512
+    m_Key: mapping.displaydiffdetails.tooltip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101855392124043264
+    m_Key: mapping.displaydiffdetails
+    m_Metadata:
+      m_Items: []
+  - m_Id: 102096011425677312
+    m_Key: graphics.displaybookmarks.tooltip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 102096015523512320
+    m_Key: graphics.displaybookmarks
+    m_Metadata:
+      m_Items: []
+  - m_Id: 102186250655694848
+    m_Key: graphics.displaybookmarkgridline.toolip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 102186255848243200
+    m_Key: graphics.displaybookmarkgridline
+    m_Metadata:
+      m_Items: []
+  - m_Id: 102193073215438848
+    m_Key: graphics.mainbeatlinewidth.tooltip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 102193078810640384
+    m_Key: graphics.mainbeatlinewidth
+    m_Metadata:
+      m_Items: []
+  - m_Id: 102206124970934272
+    m_Key: graphics.bookmarktooltiptimeinfo.tooltip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 102206129182015488
+    m_Key: graphics.bookmarktooltiptimeinfo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 102206134429089792
+    m_Key: graphics.bookmarkuiwidth.tooltip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 102206140842180608
+    m_Key: graphics.bookmarkuiwidth
+    m_Metadata:
+      m_Items: []
+  - m_Id: 102395595171495936
+    m_Key: bookmarkappearance.heading
+    m_Metadata:
+      m_Items: []
+  - m_Id: 102396931141206016
+    m_Key: camera.heading
+    m_Metadata:
+      m_Items: []
+  - m_Id: 102447908275814400
+    m_Key: general.formatjson.tooltip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 102447938869067776
+    m_Key: general.formatjson
+    m_Metadata:
+      m_Items: []
+  - m_Id: 94731652719513600
+    m_Key: quest.adb_include_path
+    m_Metadata:
+      m_Items: []
+  - m_Id: 94731842968948736
+    m_Key: quest.adb_include_path.tooltip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105008036237737984
+    m_Key: general.vanillaonlyshift.tooltip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105008044110446592
+    m_Key: general.vanillaonlyshift
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
+  m_KeyGenerator:
+    id: 0
   references:
     version: 1
+    00000000:
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables,
+        asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1628162650083

@@ -1,0 +1,340 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: SongEditMenu_es-ES
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es-ES
+  m_SharedData: {fileID: 11400000, guid: b86ac019838731d46842f98842efbe60, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 1
+    m_Localized: "Datos de la canci\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2
+    m_Localized: Dificultades del mapa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3
+    m_Localized: "Nombre de la canci\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4
+    m_Localized: "Nombre de la canci\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5
+    m_Localized: "Nombre de la canci\xF3n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6
+    m_Localized: "Subt\xEDtulo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7
+    m_Localized: "Subt\xEDtulo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8
+    m_Localized: "Subt\xEDtulos, o cualquier otra persona que haya contribuido a
+      la canci\xF3n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9
+    m_Localized: "Autor de la canci\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10
+    m_Localized: Nombre del artista
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11
+    m_Localized: "Artista principal de la canci\xF3n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12
+    m_Localized: Creador
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13
+    m_Localized: Nombre del creador
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14
+    m_Localized: "Creador del mapa de ritmo (\xA1Ese eres t\xFA!)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15
+    m_Localized: Golpes por minuto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16
+    m_Localized: 100
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17
+    m_Localized: "Introduce el tempo de la canci\xF3n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18
+    m_Localized: Song Time Offset
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19
+    m_Localized: 0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20
+    m_Localized: "Desplaza la canci\xF3n hacia delante en esta cantidad\n(en milisegundos)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21
+    m_Localized: Tiempo de inicio de la vista previa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22
+    m_Localized: 12
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23
+    m_Localized: El tiempo (en segundos) cuando la vista previa empieza.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24
+    m_Localized: "Duraci\xF3n de la vista previa"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25
+    m_Localized: 10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26
+    m_Localized: "Duraci\xF3n de la vista previa de la canci\xF3n (en segundos)."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27
+    m_Localized: "Car\xE1tula"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28
+    m_Localized: caratula.png
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29
+    m_Localized: "Ubicaci\xF3n relativa de la car\xE1tula (mejor dejarlo como est\xE1)."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30
+    m_Localized: Archivo de audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31
+    m_Localized: cancion.ogg
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32
+    m_Localized: "Ubicaci\xF3n relativa del archivo de audio (mejor dejarlo como
+      est\xE1)."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33
+    m_Localized: Entorno
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34
+    m_Localized: Plataforma personalizada
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35
+    m_Localized: Guardar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36
+    m_Localized: Eliminar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37
+    m_Localized: "\xBFEn que entorno se reproducir\xE1 la canci\xF3n?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38
+    m_Localized: Seleccionar de una lista plataformas personalizadas instaladas.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39
+    m_Localized: Deshacer cambios
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40
+    m_Localized: Volver a la lista de canciones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41
+    m_Localized: Half Jump Duration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42
+    m_Localized: "Valores habituales\nF\xE1cil, Normal, Dif\xEDcil: 4\nExperto, Experto+:
+      2"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43
+    m_Localized: Distancia de salto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44
+    m_Localized: "Valores habituales\nF\xE1cil, Normal, Dif\xEDcil: 24-26\nExperto:
+      24-32\nExperto+: 20-28"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45
+    m_Localized: Note Jump Speed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 46
+    m_Localized: 10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47
+    m_Localized: "C\xF3mo de r\xE1pido se acercan las notas al jugador"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48
+    m_Localized: Start Beat Offset
+    m_Metadata:
+      m_Items: []
+  - m_Id: 49
+    m_Localized: 0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50
+    m_Localized: Aumenta la distancia del jugador a la que las notas aparecen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51
+    m_Localized: Crear Zip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52
+    m_Localized: Abrir explorador
+    m_Metadata:
+      m_Items: []
+  - m_Id: 53
+    m_Localized: Abrir editor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54
+    m_Localized: Colaboradores
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56
+    m_Localized: Haga clic para guardar los cambios
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57
+    m_Localized: Pegar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 58
+    m_Localized: Copiar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 59
+    m_Localized: Deshacer cambios
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60
+    m_Localized: "\xA1Por favor, compruebe que el archivo de audio es v\xE1lido!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61
+    m_Localized: "Por favor, compruebe que el tiempo de inicio de la vista previa
+      y la duraci\xF3n no continuan pasado el final de la canci\xF3n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 63
+    m_Localized: "\xBFEst\xE1s seguro de que quieres borrar {0}?\n\n\xA1Los datos
+      de la canci\xF3n tambi\xE9n ser\xE1n guardados, as\xED que perder\xE1 esto
+      para siempre!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64
+    m_Localized: "\xBFEst\xE1 seguro de que desea eliminar {0}?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65
+    m_Localized: "Error mientras se creaba el paquete zip: info.dat no existe.\n\nPor
+      favor guarda tu mapa, despu\xE9s intenta empaquetar tu zip de nuevo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 66
+    m_Localized: "\xA1Guarda los datos de tu canci\xF3n antes de abrir los ficheros
+      de la canci\xF3n!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67
+    m_Localized: "Existen cambios sin guardar, \xBFest\xE1s seguro de que deseas
+      salir?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68
+    m_Localized: "Existen dificultades sin guardar, \xBFest\xE1 seguro de que desea
+      salir?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69
+    m_Localized: "ChroMapper est\xE1 configurado actualmente para no cargar nada
+      habilitado.\nPara configurar algo para cargar, visite Opciones y despl\xE1zate
+      hasta la parte inferior de los ajustes del mapeador."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70
+    m_Localized: "ChroMapper est\xE1 configurado actualmente para no cargar todo.\nPara
+      reactivar elementso, visite Opciones y despl\xE1zate hasta la parte inferior
+      de los ajustes del mapeador."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71
+    m_Localized: "\xA1Datos de la canci\xF3n guardados!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72
+    m_Localized: "\xA1Error al obtener los datos de audio!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 73
+    m_Localized: "\xA1Tipo de audio incompatible!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74
+    m_Localized: "\xA1El archivo de audio no existe!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 75
+    m_Localized: "Tienes cambios de colaborador sin guardar, \xBFest\xE1s seguro
+      de que quieres salir?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76
+    m_Localized: "Los archivos referenciados deben estar dentro de la carpeta de
+      la canci\xF3n. \xBFQuiere copiar este archivo en la carpeta de la canci\xF3n?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77
+    m_Localized: "\xA1Ya existe otro archivo con el mismo nombre en la carpeta de
+      la canci\xF3n! \xBFUsarlo en su lugar?"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1

@@ -18,18 +18,6 @@ MonoBehaviour:
   m_Metadata:
     m_Items:
     - id: 0
-    - id: 1
-    - id: 2
-    - id: 3
-    - id: 4
-    - id: 5
-    - id: 6
-    - id: 7
-    - id: 8
-    - id: 9
-    - id: 10
-    - id: 11
-    - id: 12
   m_TableData:
   - m_Id: 1
     m_Localized: 'Noten: {NotesCount}'
@@ -40,42 +28,42 @@ MonoBehaviour:
     m_Localized: 'Noten pro Sekunde: {NPSCount:F2}'
     m_Metadata:
       m_Items:
-      - id: 1
+      - id: 0
   - m_Id: 3
     m_Localized: "Ausgew\xE4hlte Noten: {NotesSelected}"
     m_Metadata:
       m_Items:
-      - id: 2
+      - id: 0
   - m_Id: 4
     m_Localized: 'NPS der Auswahl: {NPSselected:F2}'
     m_Metadata:
       m_Items:
-      - id: 3
+      - id: 0
   - m_Id: 5
     m_Localized: 'Hindernisse: {ObstacleCount}'
     m_Metadata:
       m_Items:
-      - id: 4
+      - id: 0
   - m_Id: 6
     m_Localized: 'Events: {EventCount}'
     m_Metadata:
       m_Items:
-      - id: 5
+      - id: 0
   - m_Id: 7
     m_Localized: "BPM-\xC4nderungen: {BPMCount}"
     m_Metadata:
       m_Items:
-      - id: 6
+      - id: 0
   - m_Id: 8
     m_Localized: 'Zeit am mappen: {hours:0}:{minutes:00}:{seconds:00}'
     m_Metadata:
       m_Items:
-      - id: 7
+      - id: 0
   - m_Id: 9
     m_Localized: "Ausgew\xE4hlt: {SelectedCount}"
     m_Metadata:
       m_Items:
-      - id: 8
+      - id: 0
   - m_Id: 10
     m_Localized: "Zur\xFCck"
     m_Metadata:
@@ -109,7 +97,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 18
-    m_Localized: Chromatic Aberration
+    m_Localized: Chromatische Aberration
     m_Metadata:
       m_Items: []
   - m_Id: 19
@@ -148,7 +136,7 @@ MonoBehaviour:
     m_Localized: "Speichere fr\xFCh, speichere oft!"
     m_Metadata:
       m_Items:
-      - id: 9
+      - id: 0
   - m_Id: 30
     m_Localized: ChroMapper beenden
     m_Metadata:
@@ -194,7 +182,7 @@ MonoBehaviour:
     m_Localized: "Workflows \xE4ndern"
     m_Metadata:
       m_Items:
-      - id: 10
+      - id: 0
   - m_Id: 42
     m_Localized: "Dinge l\xF6schen"
     m_Metadata:
@@ -208,7 +196,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 45
-    m_Localized: Das Licht wird verblassen
+    m_Localized: Das Licht wird verblassen.
     m_Metadata:
       m_Items: []
   - m_Id: 46
@@ -272,20 +260,20 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 63
-    m_Localized: Spielend
+    m_Localized: Spielt
     m_Metadata:
       m_Items: []
   - m_Id: 64
     m_Localized: "{Keybind} zum \xE4ndern"
     m_Metadata:
       m_Items:
-      - id: 11
+      - id: 0
   - m_Id: 65
-    m_Localized: Setze Chroma RGB Events
+    m_Localized: Setze Chroma RGB Events.
     m_Metadata:
       m_Items: []
   - m_Id: 66
-    m_Localized: "Verwende die Farben von Chroma gef\xE4rbten Objekten."
+    m_Localized: "W\xE4hle Farben von mit Chroma gef\xE4rbten Objekten."
     m_Metadata:
       m_Items: []
   - m_Id: 67
@@ -414,7 +402,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 97
-    m_Localized: Enter the name of this new bookmark.
+    m_Localized: Gebe den Namen des neuen Lesezeichens ein.
     m_Metadata:
       m_Items: []
   - m_Id: 98
@@ -506,11 +494,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 119
-    m_Localized: Chroma Easing
+    m_Localized: Chroma-Lockerung
     m_Metadata:
       m_Items: []
   - m_Id: 120
-    m_Localized: Changes easing for Chroma gradients.
+    m_Localized: "\xC4ndert die Lockerung f\xFCr Chroma-Farbverl\xE4ufe."
     m_Metadata:
       m_Items: []
   - m_Id: 121
@@ -530,7 +518,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 125
-    m_Localized: Precise Laser Speed Interpolation
+    m_Localized: "Pr\xE4zise Lasergeschwindigkeits-Interpolation"
     m_Metadata:
       m_Items: []
   - m_Id: 126
@@ -542,11 +530,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 128
-    m_Localized: Laser Speed Easing
+    m_Localized: Lasergeschwindigkeitslockerung
     m_Metadata:
       m_Items: []
   - m_Id: 129
-    m_Localized: Controls easing for precise laser speed values.
+    m_Localized: "Steuert die Lockerung f\xFCr pr\xE4zise Lasergeschwindigkeitswerte."
     m_Metadata:
       m_Items: []
   - m_Id: 130
@@ -587,7 +575,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 139
-    m_Localized: Decimal Precision
+    m_Localized: "Dezimalpr\xE4zision"
     m_Metadata:
       m_Items: []
   - m_Id: 140
@@ -598,7 +586,7 @@ MonoBehaviour:
     m_Localized: "Schw\xFCnge pro Sekunde: {OverallSPS:F2}"
     m_Metadata:
       m_Items:
-      - id: 12
+      - id: 0
   - m_Id: 143
     m_Localized: Chroma Stufengradient
     m_Metadata:
@@ -678,7 +666,38 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 155
-    m_Localized: Enter a new name for this bookmark.
+    m_Localized: Gebe den Namen des neuen Lesezeichens ein.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 234935484416
+    m_Localized: 'Momentaner BPM: {CurrentBPM:0.###}'
+    m_Metadata:
+      m_Items:
+      - id: 0
+  - m_Id: 1123800776704
+    m_Localized: "Rot/Blau Verh\xE4ltnis: {RedBlueRatio:F2}"
+    m_Metadata:
+      m_Items:
+      - id: 0
+  - m_Id: 3209883108945920
+    m_Localized: Bomben:{BombCount}
+    m_Metadata:
+      m_Items:
+      - id: 0
+  - m_Id: 12803634470490112
+    m_Localized: "W\xE4hle die neue Farbe f\xFCr dieses Lesezeichen aus."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18507054370394112
+    m_Localized: "W\xE4hle zuerst etwas aus!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68889908591489024
+    m_Localized: Bookmark Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68889912282476544
+    m_Localized: Bookmark Color
     m_Metadata:
       m_Items: []
   references:
@@ -686,52 +705,4 @@ MonoBehaviour:
     00000000:
       type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_Entries: 01000000
-    00000001:
-      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
-      data:
-        m_Entries: 02000000
-    00000002:
-      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
-      data:
-        m_Entries: 03000000
-    00000003:
-      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
-      data:
-        m_Entries: 04000000
-    00000004:
-      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
-      data:
-        m_Entries: 05000000
-    00000005:
-      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
-      data:
-        m_Entries: 06000000
-    00000006:
-      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
-      data:
-        m_Entries: 07000000
-    00000007:
-      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
-      data:
-        m_Entries: 08000000
-    00000008:
-      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
-      data:
-        m_Entries: 09000000
-    00000009:
-      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
-      data:
-        m_Entries: 1d000000
-    0000000A:
-      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
-      data:
-        m_Entries: 29000000
-    0000000B:
-      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
-      data:
-        m_Entries: 40000000
-    0000000C:
-      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
-      data:
-        m_Entries: 8d000000
+        m_Entries: 290000000000000000b07a265f670b00070000000000000000003fb3360000000600000000000000010000000000000003000000000000000200000000000000040000000000000005000000000000000000bfa7050100008d0000000000000008000000000000001d0000000000000009000000000000004000000000000000

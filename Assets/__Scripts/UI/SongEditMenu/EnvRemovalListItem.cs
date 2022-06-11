@@ -4,27 +4,23 @@ using UnityEngine;
 public class EnvRemovalListItem : MonoBehaviour
 {
     [SerializeField] private TMP_InputField textField;
-    public string Value => textField.text;
     private EnvRemoval controller;
+    public EnvEnhancement Value { get; private set; }
 
-    public void Setup(EnvRemoval controllerNew, string v)
+    private void OnDestroy() => textField.DeactivateInputField();
+
+    public void Setup(EnvRemoval controllerNew, EnvEnhancement v)
     {
-        textField.text = v ?? "";
+        Value = v;
+        textField.text = v.ID ?? "";
         controller = controllerNew;
     }
 
     public void OnEndEdit()
     {
+        Value.ID = textField.text;
         controller.UpdateEnvRemoval();
     }
 
-    public void Delete()
-    {
-        controller.Remove(this);
-    }
-
-    private void OnDestroy()
-    {
-        textField.DeactivateInputField();
-    }
+    public void Delete() => controller.Remove(this);
 }

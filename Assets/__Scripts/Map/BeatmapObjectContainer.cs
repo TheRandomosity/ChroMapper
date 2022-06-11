@@ -2,82 +2,97 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public abstract class BeatmapObjectContainer : MonoBehaviour
 {
     public static Action<BeatmapObjectContainer, bool, string> FlaggedForDeletionEvent;
 
-    private static readonly int Outline = Shader.PropertyToID("_Outline");
-    private static readonly int OutlineColor = Shader.PropertyToID("_OutlineColor");
+    internal static readonly int color = Shader.PropertyToID("_Color");
+    internal static readonly int rotation = Shader.PropertyToID("_Rotation");
+    internal static readonly int outline = Shader.PropertyToID("_Outline");
+    internal static readonly int outlineColor = Shader.PropertyToID("_OutlineColor");
+    [FormerlySerializedAs("dragging")] public bool Dragging;
 
-    public bool OutlineVisible { get => SelectionMaterials.FirstOrDefault()?.GetFloat(Outline) != 0;
-        set {
-            foreach (Material SelectionMaterial in SelectionMaterials)
-            {
-                if (!SelectionMaterial.HasProperty(OutlineColor)) return;
-                SelectionMaterial.SetFloat(Outline, value ? 0.05f : 0);
-                Color c = SelectionMaterial.GetColor(OutlineColor);
-                SelectionMaterial.SetColor(OutlineColor, new Color(c.r, c.g, c.b, value ? 1 : 0));
-            }
+    [FormerlySerializedAs("colliders")] [SerializeField] protected List<IntersectionCollider> Colliders;
+
+    [FormerlySerializedAs("selectionRenderers")] [SerializeField] protected List<Renderer> SelectionRenderers = new List<Renderer>();
+
+    [FormerlySerializedAs("boxCollider")] [SerializeField] protected BoxCollider BoxCollider;
+    private readonly List<Renderer> modelRenderers = new List<Renderer>();
+    internal bool selectionStateChanged;
+
+    public bool OutlineVisible
+    {
+        get => MaterialPropertyBlock.GetFloat(outline) != 0;
+        set
+        {
+            SelectionRenderers.ForEach(r => r.enabled = value);
+            MaterialPropertyBlock.SetFloat(outline, value ? 0.05f : 0);
+            UpdateMaterials();
         }
     }
 
-    public Track AssignedTrack { get; private set; } = null;
+    public Track AssignedTrack { get; private set; }
 
-    [SerializeField]
-    public abstract BeatmapObject objectData { get; set; }
+    public MaterialPropertyBlock MaterialPropertyBlock;
+
+    public abstract BeatmapObject ObjectData { get; set; }
+
+    public int ChunkID => (int)(ObjectData.Time / Intersections.ChunkSize);
 
     public abstract void UpdateGridPosition();
 
-    protected int chunkID;
-    public int ChunkID { get => chunkID; }
-    public List<Material> ModelMaterials = new List<Material>() { };
-    public List<Material> SelectionMaterials = new List<Material>() { };
-
-    [SerializeField] protected BoxCollider boxCollider;
-    internal bool SelectionStateChanged;
-
     public virtual void Setup()
     {
-        ModelMaterials.Clear();
-        SelectionMaterials.Clear();
-        foreach (Renderer renderer in GetComponentsInChildren<Renderer>(true))
+        if (MaterialPropertyBlock == null)
         {
-            if (renderer is SpriteRenderer) continue;
-
-            ModelMaterials.Add(renderer.materials.First());
-            SelectionMaterials.Add(renderer.materials.Last());
+            MaterialPropertyBlock = new MaterialPropertyBlock();
+            modelRenderers.AddRange(GetComponentsInChildren<Renderer>(true).Where(x => !(x is SpriteRenderer)));
         }
     }
 
     internal virtual void SafeSetActive(bool active)
     {
-        if (active != gameObject.activeSelf)
-        {
-            gameObject.SetActive(active);
-            if (boxCollider != null) boxCollider.enabled = active;
-        }
+        if (active != gameObject.activeSelf) gameObject.SetActive(active);
     }
 
     internal void SafeSetBoxCollider(bool con)
     {
-        if (boxCollider == null) return;
-        if (con != boxCollider.isTrigger) boxCollider.isTrigger = con;
+        if (BoxCollider == null) return;
+        if (con != BoxCollider.isTrigger) BoxCollider.isTrigger = con;
+    }
+
+    internal virtual void UpdateMaterials()
+    {
+        foreach (var renderer in modelRenderers) renderer.SetPropertyBlock(MaterialPropertyBlock);
+    }
+
+    public void SetRotation(float rotation)
+    {
+        MaterialPropertyBlock.SetFloat(BeatmapObjectContainer.rotation, rotation);
+        UpdateMaterials();
     }
 
     public void SetOutlineColor(Color color, bool automaticallyShowOutline = true)
     {
         if (automaticallyShowOutline) OutlineVisible = true;
-        foreach (Material SelectionMaterial in SelectionMaterials)
-        {
-            SelectionMaterial.SetColor(OutlineColor, color);
-        }
+        MaterialPropertyBlock.SetColor(outlineColor, color);
+        UpdateMaterials();
     }
 
-    public virtual void AssignTrack(Track track)
+    public virtual void AssignTrack(Track track) => AssignedTrack = track;
+
+    protected virtual void UpdateCollisionGroups()
     {
-        AssignedTrack = track;
-        chunkID = (int)Math.Round(objectData._time / (double)BeatmapObjectContainerCollection.ChunkSize,
-                 MidpointRounding.AwayFromZero);
+        var chunkId = ChunkID;
+
+        foreach (var collider in Colliders)
+        {
+            var unregistered = Intersections.UnregisterColliderFromGroups(collider);
+            collider.CollisionGroups.Clear();
+            collider.CollisionGroups.Add(chunkId);
+            if (unregistered) Intersections.RegisterColliderToGroups(collider);
+        }
     }
 }

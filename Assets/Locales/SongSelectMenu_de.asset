@@ -32,7 +32,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4
-    m_Localized: Song aktualisieren
+    m_Localized: Songs aktualisieren
     m_Metadata:
       m_Items: []
   - m_Id: 5
@@ -46,7 +46,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7
-    m_Localized: Bearbeiten
+    m_Localized: BEARBEITEN
     m_Metadata:
       m_Items: []
   - m_Id: 8
@@ -79,7 +79,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 16
-    m_Localized: Erstelle eine neue Map
+    m_Localized: Erstelle eine neue Map!
     m_Metadata:
       m_Items: []
   - m_Id: 17
@@ -87,7 +87,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 18
-    m_Localized: "Tempor\xE4rer Lader"
+    m_Localized: "Tempor\xE4res Laden"
     m_Metadata:
       m_Items: []
   - m_Id: 19
@@ -109,19 +109,31 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 23
     m_Localized: "Es existiert bereits eine Map mit diesem Namen\n\nBitte gebe den
-      Namen f\xFCr die neue Map ein"
+      Namen f\xFCr die neue Map ein."
     m_Metadata:
       m_Items: []
   - m_Id: 24
-    m_Localized: Speichere die info.dat vor dem bearbeiten der Map!
+    m_Localized: Speichere info.dat vor dem bearbeiten der Map!
     m_Metadata:
       m_Items: []
   - m_Id: 25
-    m_Localized: Update available
+    m_Localized: "Neue Version verf\xFCgbar"
     m_Metadata:
       m_Items: []
   - m_Id: 26
-    m_Localized: Environment Removal
+    m_Localized: Umgebungsentfernung
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27
+    m_Localized: Nach Songnamen sortieren
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28
+    m_Localized: "Nach K\xFCnstler sortieren"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29
+    m_Localized: "Nach \xC4nderungsdatum sortieren"
     m_Metadata:
       m_Items: []
   references:
@@ -129,4 +141,4 @@ MonoBehaviour:
     00000000:
       type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_Entries: 0c000000
+        m_Entries: 0c00000000000000

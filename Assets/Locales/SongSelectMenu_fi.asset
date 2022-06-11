@@ -114,11 +114,23 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 25
-    m_Localized: Update available
+    m_Localized: "P\xE4ivitys saatavilla"
     m_Metadata:
       m_Items: []
   - m_Id: 26
-    m_Localized: Environment Removal
+    m_Localized: "Ymp\xE4rist\xF6n Poistaminen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27
+    m_Localized: Lajittele kappaleen nimen mukaan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28
+    m_Localized: "Lajittele kappaleen esitt\xE4j\xE4n mukaan"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29
+    m_Localized: "Lajittele muokkausp\xE4iv\xE4m\xE4\xE4r\xE4n perusteella"
     m_Metadata:
       m_Items: []
   references:
@@ -126,4 +138,4 @@ MonoBehaviour:
     00000000:
       type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_Entries: 0c000000
+        m_Entries: 0c00000000000000

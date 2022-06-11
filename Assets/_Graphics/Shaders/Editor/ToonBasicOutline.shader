@@ -8,7 +8,7 @@ Shader "Toon/Basic Outline"
 	}
 	SubShader 
 	{
-		Tags { "Queue"="Transparent" "RenderType"="Transparent" }
+		Tags { "Queue"="Geometry" "RenderType"="Opaque" }
 		
 		Cull Front
         ZWrite Off
@@ -25,6 +25,7 @@ Shader "Toon/Basic Outline"
 			#pragma vertex vert
 			#pragma fragment frag
 			#pragma multi_compile_fog
+            #pragma multi_compile_instancing
 			
             CBUFFER_START(UnityPerMaterial)
             float _Outline;
@@ -48,18 +49,22 @@ Shader "Toon/Basic Outline"
             {
                 Varyings output = (Varyings)0;
                 
-                input.positionOS.xyz += input.positionOS * _Outline;
-                
-                VertexPositionInputs vertexInput = GetVertexPositionInputs(input.positionOS.xyz);
-                output.positionCS = vertexInput.positionCS;
-                
-                output.color = _OutlineColor;
-                output.fogCoord = ComputeFogFactor(output.positionCS.z);
+                if (_Outline > 0.01)
+                {
+                    input.positionOS.xyz += input.positionOS * _Outline;
+
+                    VertexPositionInputs vertexInput = GetVertexPositionInputs(input.positionOS.xyz);
+                    output.positionCS = vertexInput.positionCS;
+
+                    output.color = _OutlineColor;
+                    output.fogCoord = ComputeFogFactor(output.positionCS.z);
+                }
                 return output;
             }
 			
-			half4 frag(Varyings i) : SV_Target
-			{
+            half4 frag(Varyings i) : SV_Target
+            {
+                if (_Outline <= 0.01) clip(-1);
 				i.color.rgb = MixFog(i.color.rgb, i.fogCoord);
 				return i.color;
 			}

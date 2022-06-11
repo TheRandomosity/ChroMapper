@@ -2,54 +2,48 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Localization;
+using UnityEngine.Serialization;
 
-public class Tooltip : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
+public class Tooltip : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+{
+    [FormerlySerializedAs("tooltip")] public LocalizedString LocalizedTooltip;
 
-    [SerializeField]
-    public LocalizedString tooltip;
+    [FormerlySerializedAs("tooltipOverride")] [HideInInspector] public string TooltipOverride;
 
-    [HideInInspector]
-    public string tooltipOverride;
+    [FormerlySerializedAs("advancedTooltip")] public string AdvancedTooltip;
 
-    [SerializeField]
-    public string advancedTooltip;
+    public bool TooltipActive;
 
-    public void OnPointerEnter(PointerEventData eventData) {
-        if (routine == null) {
-            routine = StartCoroutine(TooltipRoutine(0));
-        }
-    }
+    private Coroutine routine;
 
-    public void OnPointerExit(PointerEventData eventData) {
-        if (routine != null) {
-            StopCoroutine(routine);
-            routine = null;
-        }
-        PersistentUI.Instance?.HideTooltip();
-    }
+    private void OnDisable() => OnPointerExit(null);
 
-    void OnDisable() {
-        if (routine != null) {
-            StopCoroutine(routine);
-            routine = null;
-        }
-        PersistentUI.Instance?.HideTooltip();
-    }
-
-    Coroutine routine;
-    IEnumerator TooltipRoutine(float timeToWait)
+    public void OnPointerEnter(PointerEventData eventData)
     {
-        string tooltipTextResult = tooltipOverride;
-        if (string.IsNullOrEmpty(tooltipOverride))
+        if (routine == null) routine = StartCoroutine(TooltipRoutine(0));
+
+        TooltipActive = true;
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        if (routine != null)
         {
-            var tooltipText = tooltip.GetLocalizedString();
-            yield return tooltipText;
-            tooltipTextResult = tooltipText.Result;
+            StopCoroutine(routine);
+            routine = null;
         }
 
-        PersistentUI.Instance.SetTooltip(tooltipTextResult, advancedTooltip);
+        PersistentUI.Instance.HideTooltip();
+        TooltipActive = false;
+    }
+
+    private IEnumerator TooltipRoutine(float timeToWait)
+    {
+        var tooltipTextResult = TooltipOverride;
+        if (string.IsNullOrEmpty(TooltipOverride)) tooltipTextResult = LocalizedTooltip.GetLocalizedString();
+
+        PersistentUI.Instance.SetTooltip(tooltipTextResult, AdvancedTooltip);
         yield return new WaitForSeconds(timeToWait);
         PersistentUI.Instance.ShowTooltip();
     }
-
 }

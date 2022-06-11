@@ -1,147 +1,162 @@
 ﻿using UnityEngine;
+using UnityEngine.Serialization;
 
 [CreateAssetMenu(fileName = "EventAppearanceSO", menuName = "Map/Appearance/Event Appearance SO")]
 public class EventAppearanceSO : ScriptableObject
 {
-    [Space(5)]
-    [SerializeField] private GameObject LaserSpeedPrefab;
-    [Space(5)]
-    [Header("Default Colors")]
-    [SerializeField] public Color RedColor;
-    [SerializeField] public Color BlueColor;
-    [SerializeField] public Color RedBoostColor;
-    [SerializeField] public Color BlueBoostColor;
-    [SerializeField] private Color OffColor;
-    [Header("Other Event Colors")]
-    [SerializeField] private Color RingEventsColor;
-    [Tooltip("Example: Ring rotate/Ring zoom/Light speed change events")]
-    [SerializeField] private Color OtherColor;
-    [Space(5)]
-    [Header("Shader Parameters")]
-    [Header("Cube")]
-    [SerializeField] private Vector3 cubeFlashShaderOffset = new Vector3(0, 1, 0);
-    [SerializeField] private Vector3 cubeFadeShaderOffset = new Vector3(0, -1, 0);
-    [SerializeField] private float cubeDefaultFadeSize = 0.5f;
-    [SerializeField] private float cubeBoostEventFadeSize = 0.1f;
-    [Header("Pyramid")]
-    [SerializeField] private Vector3 pyramidFlashShaderOffset = new Vector3(0, 0, 50);
-    [SerializeField] private Vector3 pyramidFadeShaderOffset = Vector3.zero;
-    [SerializeField] private float pyramidDefaultFadeSize = 50f;
-    [SerializeField] private float pyramidBoostEventFadeSize = 10f;
+    [FormerlySerializedAs("LaserSpeedPrefab")] [Space(5)] [SerializeField] private GameObject laserSpeedPrefab;
 
-    public void SetEventAppearance(BeatmapEventContainer e, bool final = true, bool boost = false) {
-        Color color = Color.white;
-        e.UpdateOffset(Vector3.zero);
-        e.UpdateAlpha(final ? 1.0f : 0.6f);
+    [Space(5)] [Header("Default Colors")] public Color RedColor;
+    public Color BlueColor;
+    public Color RedBoostColor;
+    public Color BlueBoostColor;
+    [FormerlySerializedAs("OffColor")] [SerializeField] private Color offColor;
+
+    [FormerlySerializedAs("RingEventsColor")]
+    [Header("Other Event Colors")]
+    [SerializeField]
+    private Color ringEventsColor;
+
+    [FormerlySerializedAs("OtherColor")]
+    [Tooltip("Example: Ring rotate/Ring zoom/Light speed change events")]
+    [SerializeField]
+    private Color otherColor;
+
+    public void SetEventAppearance(BeatmapEventContainer e, bool final = true, bool boost = false)
+    {
+        var color = Color.white;
+        e.UpdateOffset(Vector3.zero, false);
+        e.UpdateAlpha(final ? 1.0f : 0.6f, false);
         e.UpdateScale(final ? 0.75f : 0.6f);
-        e.ChangeSpotlightSize(1f);
-        if (e.eventData.IsRotationEvent || e.eventData.IsLaserSpeedEvent)
+        e.ChangeSpotlightSize(1f, false);
+        if (e.EventData.IsRotationEvent || e.EventData.IsLaserSpeedEvent || e.EventData.IsInterscopeEvent)
         {
-            if (e.eventData.IsRotationEvent)
+            if (e.EventData.IsRotationEvent)
             {
-                int? rotation = e.eventData.GetRotationDegreeFromValue();
+                var rotation = e.EventData.GetRotationDegreeFromValue();
                 e.UpdateTextDisplay(true, rotation != null ? $"{rotation}°" : "Invalid Rotation");
             }
-            else if (e.eventData.IsLaserSpeedEvent)
+            else if (e.EventData.IsLaserSpeedEvent || e.EventData.IsInterscopeEvent)
             {
-                float speed = e.eventData._value;
-                if (e.eventData._customData != null && e.eventData._customData.HasKey("_preciseSpeed"))
+                float speed = e.EventData.Value;
+                if (e.EventData.CustomData != null)
                 {
-                    speed = e.eventData._customData["_preciseSpeed"].AsFloat;
+                    if (e.EventData.CustomData.HasKey("_preciseSpeed"))
+                        speed = e.EventData.CustomData["_preciseSpeed"].AsFloat;
+                    else if (e.EventData.CustomData.HasKey("_speed"))
+                        speed = e.EventData.CustomData["_speed"].AsFloat;
                 }
+
                 e.UpdateTextDisplay(true, speed.ToString());
             }
         }
-        else e.UpdateTextDisplay(false);
-        if (e.eventData.IsUtilityEvent)
+        else
         {
-            e.UsePyramidModel = false;
-            if (e.eventData.IsRingEvent)
+            e.UpdateTextDisplay(false);
+        }
+
+        if (e.EventData.IsUtilityEvent)
+        {
+            e.EventModel = EventModelType.Block;
+
+            if (e.EventData.IsRingEvent)
             {
-                e.ChangeColor(RingEventsColor);
-                e.ChangeBaseColor(RingEventsColor);
+                e.ChangeColor(ringEventsColor, false);
+                e.ChangeBaseColor(ringEventsColor, false);
             }
-            else if (e.eventData._type == MapEvent.EVENT_TYPE_BOOST_LIGHTS)
+            else if (e.EventData.Type == MapEvent.EventTypeBoostLights)
             {
-                if (e.eventData._value == 1)
+                if (e.EventData.Value == 1)
                 {
-                    e.ChangeBaseColor(RedBoostColor);
-                    e.ChangeColor(BlueBoostColor);
+                    e.ChangeBaseColor(RedBoostColor, false);
+                    e.ChangeColor(BlueBoostColor, false);
                 }
                 else
                 {
-                    e.ChangeBaseColor(RedColor);
-                    e.ChangeColor(BlueColor);
+                    e.ChangeBaseColor(RedColor, false);
+                    e.ChangeColor(BlueColor, false);
                 }
-                e.UpdateOffset(Vector3.forward * 1.05f);
-                e.ChangeFadeSize(cubeBoostEventFadeSize);
+
+                e.UpdateOffset(Vector3.forward * 1.05f, false);
+                e.ChangeFadeSize(e.BoostEventFadeSize, false);
+                e.UpdateMaterials();
                 return;
             }
             else
             {
-                e.ChangeColor(OtherColor);
-                e.ChangeBaseColor(OtherColor);
+                e.ChangeColor(otherColor, false);
+                e.ChangeBaseColor(otherColor, false);
             }
-            e.UpdateOffset(Vector3.zero);
+
+            e.UpdateOffset(Vector3.zero, false);
             e.UpdateGradientRendering();
+            e.UpdateMaterials();
             return;
         }
-        else
-        {
-            if (e.eventData._value >= ColourManager.RGB_INT_OFFSET)
-            {
-                color = ColourManager.ColourFromInt(e.eventData._value);
-                e.UpdateAlpha(final ? 0.9f : 0.6f);
-            }
-            else if (e.eventData._value <= 3)
-            {
-                color = boost ? BlueBoostColor : BlueColor;
-            }
-            else if (e.eventData._value <= 7 && e.eventData._value >= 5)
-            {
-                color = boost ? RedBoostColor : RedColor;
-            }
-            else if (e.eventData._value == 4) color = OffColor;
 
-            if (e.eventData._customData?["_color"] != null && e.eventData._value > 0)
-            {
-                color = e.eventData._customData["_color"];
-            }
-        }
-        e.ChangeColor(color);
-        e.ChangeBaseColor(Color.black);
-        e.UsePyramidModel = Settings.Instance.PyramidEventModels;
-        switch (e.eventData._value)
+        if (e.EventData.Value >= ColourManager.RgbintOffset)
         {
-            case MapEvent.LIGHT_VALUE_OFF:
-                e.ChangeColor(OffColor);
-                e.ChangeBaseColor(OffColor);
-                e.UpdateOffset(Vector3.zero);
+            color = ColourManager.ColourFromInt(e.EventData.Value);
+            e.UpdateAlpha(final ? 0.9f : 0.6f, false);
+        }
+        else if (e.EventData.Value <= 3)
+        {
+            color = boost ? BlueBoostColor : BlueColor;
+        }
+        else if (e.EventData.Value <= 7 && e.EventData.Value >= 5)
+        {
+            color = boost ? RedBoostColor : RedColor;
+        }
+        else if (e.EventData.Value == 4)
+        {
+            color = offColor;
+        }
+        if (Settings.Instance.EmulateChromaLite && e.EventData.CustomData?["_color"] != null && e.EventData.Value > 0)
+            color = e.EventData.CustomData["_color"];
+
+        e.EventModel = Settings.Instance.EventModel;
+        e.ChangeColor(color, false);
+        e.ChangeBaseColor(Color.black, false);
+        switch (e.EventData.Value)
+        {
+            case MapEvent.LightValueOff:
+                e.ChangeColor(offColor, false);
+                e.ChangeBaseColor(offColor, false);
+                e.UpdateOffset(Vector3.zero, false);
                 break;
-            case MapEvent.LIGHT_VALUE_BLUE_ON:
-                e.UpdateOffset(Vector3.zero);
-                e.ChangeBaseColor(color);
+            case MapEvent.LightValueBlueON:
+                e.UpdateOffset(Vector3.zero, false);
+                e.ChangeBaseColor(color, false);
                 break;
-            case MapEvent.LIGHT_VALUE_BLUE_FLASH:
-                e.UpdateOffset(e.UsePyramidModel ? pyramidFlashShaderOffset : cubeFlashShaderOffset);
+            case MapEvent.LightValueBlueFlash:
+                e.UpdateOffset(e.FlashShaderOffset, false);
                 break;
-            case MapEvent.LIGHT_VALUE_BLUE_FADE:
-                e.UpdateOffset(e.UsePyramidModel ? pyramidFadeShaderOffset : cubeFadeShaderOffset);
+            case MapEvent.LightValueBlueFade:
+                e.UpdateOffset(e.FadeShaderOffset, false);
                 break;
-            case MapEvent.LIGHT_VALUE_RED_ON:
-                e.UpdateOffset(Vector3.zero);
-                e.ChangeBaseColor(color);
+            case MapEvent.LightValueRedON:
+                e.UpdateOffset(Vector3.zero, false);
+                e.ChangeBaseColor(color, false);
                 break;
-            case MapEvent.LIGHT_VALUE_RED_FLASH:
-                e.UpdateOffset(e.UsePyramidModel ? pyramidFlashShaderOffset : cubeFlashShaderOffset);
+            case MapEvent.LightValueRedFlash:
+                e.UpdateOffset(e.FlashShaderOffset, false);
                 break;
-            case MapEvent.LIGHT_VALUE_RED_FADE:
-                e.UpdateOffset(e.UsePyramidModel ? pyramidFadeShaderOffset : cubeFadeShaderOffset);
+            case MapEvent.LightValueRedFade:
+                e.UpdateOffset(e.FadeShaderOffset, false);
                 break;
         }
 
-        e.ChangeFadeSize(e.UsePyramidModel ? pyramidDefaultFadeSize : cubeDefaultFadeSize);
+        e.ChangeFadeSize(e.DefaultFadeSize, false);
 
         if (Settings.Instance.VisualizeChromaGradients) e.UpdateGradientRendering();
+
+        e.UpdateMaterials();
     }
+}
+
+public enum EventModelType
+{
+    Block = 0,
+    Pyramid = 1,
+    FlatPyramid = 2
 }

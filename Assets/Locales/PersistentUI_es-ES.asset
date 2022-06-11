@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: PersistentUI_es-ES
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es-ES
+  m_SharedData: {fileID: 11400000, guid: b957287237cbbe24ead8a48b8517579e, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 1
+    m_Localized: "S\xED"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2
+    m_Localized: No
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3
+    m_Localized: Vale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4
+    m_Localized: Cancelar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5
+    m_Localized: "ChroMapper ha detectado que tu archivo de datos ha sido marcado
+      como s\xF3lo lectura.\n\nPor favor elimina el indicador de s\xF3lo lectura
+      y prueba de nuevo, o sigue usando el \xFAltimo editor de la familia EditSaber.\n\nMarcar
+      tu archivo de datos como s\xF3lo lectura para prevenir que MM o CM lo sobreescriban
+      es extremadamente est\xFApido, deshazlo o ll\xE9vate tu mapa a otra parte."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6
+    m_Localized: "El mapeo 360 es relativamente nuevo y puede hacer f\xE1cilmente
+      que el mapa sea injugable si no se prueba.\n\nPor el amor de todo lo sagrado,
+      haz que t\xFA y otras personas prueben tu mapa con frecuencia."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7
+    m_Localized: No me lo recuerdes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8
+    m_Localized: "\xBFEst\xE1s seguro de que quieres cancelar la carga de la canci\xF3n?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9
+    m_Localized: "Algunos ajustes de ChroMapper fallaron al cargarse.\n\nSi este
+      cuadro de di\xE1logo sigue mostrandose cuando inicie ChroMapper, intente borrar
+      su fichero de configuraci\xF3n ubicado en:\n{0}/ChroMapperSettings.json"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10
+    m_Localized: "Discord RPC ha encontrado un error: {0}.\nDiscord RPC ser\xE1 desactivado
+      hasta que reinicie ChroMapper."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11
+    m_Localized: Confirmar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3718944288768
+    m_Localized: Generate bug report
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1
